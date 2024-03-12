@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Kanban app</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a class="navbar-container__brand" href="#">Kanban app</a>
+            <div class="navbar-container-auth">
+                <form class="navbar-container-auth-form">
+                    <input class="navbar-container-auth-form__input" name="login" autocomplete="username" type="text"
+                        placeholder="Login" aria-label="Login" >
+                    <input class="navbar-container-auth-form__input" name="password" autocomplete="current-password" type="password"
+                        placeholder="Password" aria-label="Password">
+                    <button class="btn navbar-container-auth-form__btn" type="submit">Sign In</button>
+                </form>
+                <div class="navbar-container-auth-ok">
+                    <span class="navbar-container-auth-ok__hello"></span>
+                    <div class="navbar-container-auth-ok__avatar"></div>   
+                    <div class="navbar-container-auth-ok-dropbtn">
+                        <div class="navbar-container-auth-ok-dropbtn__btn"></div> 
+                        <div class="navbar-container-auth-ok-dropbtn-content">
+                            <div class="navbar-container-auth-ok-dropbtn-content__transparent"></div>
+                            <div class="navbar-container-auth-ok-dropbtn-content__info">Profile</div>
+                            <div class="navbar-container-auth-ok-dropbtn-content-users">
+                                <a href="#" class="navbar-container-auth-ok-dropbtn-content-users__btn">Users</a>
+                            </div>
+                            <div class="navbar-container-auth-ok-dropbtn-content-addUser">
+                                <a href="#" class="navbar-container-auth-ok-dropbtn-content-addUser__btn">Add user</a>
+                            </div>
+                            <div class="navbar-container-auth-ok-dropbtn-content-logout">
+                                <a href="#" class="navbar-container-auth-ok-dropbtn-content-logout__btn">Log Out</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="content">Please Sign In to see your tasks!</div>
+    <div class="kanban">
+        <div class="kanban-parts kanban-parts__dr-backlog">Backlog
+            <div class="kanban-parts__backlog "></div>
+            <div class="kanban-parts__add">
+                <a href="#" class="backlog__add">+ Add card</a>
+            </div>
+        </div>
+        <div class="kanban-parts kanban-parts__dr-ready">Ready
+            <div class="kanban-parts__ready" ></div>
+            <div class="kanban-parts__add ready__add">+ Add card</div>
+        </div>
+        <div class="kanban-parts kanban-parts__dr-inProgress">In Progress
+            <div class="kanban-parts__inProgress"></div>
+            <div class="kanban-parts__add progress__add">+ Add card</div>
+        </div>
+        <div class="kanban-parts kanban-parts__dr-finished">Finished
+            <div class="kanban-parts__finished"></div>
+            <div class="kanban-parts__add finished__add">+ Add card</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item__close"></div>
+        <form class="item-form">
+            <input class="item-form-input item-form-input__title" name="title" autocomplete="title" type="text"
+                placeholder="title" aria-label="title" >
+            <input class="item-form-input item-form-input__text" name="text" autocomplete="text" type="text"
+                placeholder="text" aria-label="text">
+            <button class="item-form-input__btn" name="button" type="submit">Add task</button>
+            <button class="btn__save" type="button">Save</button>
+            <button class="btn__delete" type="button">Delete</button>
+        </form>
+    </div>
+    <div class="popup">
+        <div class="popup__close item__close"></div>
+        <select class="popup__select">
+            <option value="1">Элемент 1</option>
+            <option value="2">Элемент 2</option>
+            <option value="3">Элемент 3</option>
+            <option value="4">Элемент 4</option>
+        </select>
+        <!-- <button onclick="getSelectValue()" class="popup__btn item-form-input__btn">Add card</button> -->
+        <button class="popup__btn item-form-input__btn">Add card</button>
+        <button class="popup__btn_delete" type="button">Delete</button>
+    </div>
+    <div class="addUser">
+        <div class="addUser__close"></div>
+        <form class="addUser-form">
+            <input class="navbar-container-auth-form__input" name="login" autocomplete="username" type="text"
+                placeholder="Login" aria-label="Login" >
+            <input class="navbar-container-auth-form__input" name="password" autocomplete="current-password" type="password"
+                placeholder="Password" aria-label="Password">
+            <button class="addUser__btn" type="button">Add user</button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-count">
+            <div class="footer-text footer-count-active"></div>
+            <div class="footer-text footer-count-finished"></div>
+        </div>
+        <div class="footer-text footer-count-finished">Kanban board by Ilya Solovyev, 2024</div>
+    </footer>
+</body>
+</html>
